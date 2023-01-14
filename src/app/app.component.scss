@@ -1,0 +1,47 @@
+@import "../styles/colors";
+@import "../styles/fonts";
+
+:host {
+  --background-color: #{$very-light-gray};
+  --elements-color: #{$white};
+  --input-color: #{$dark-gray};
+  --text-color: #{$very-dark-blue};
+}
+
+:host.dark {
+  --background-color: #{$very-dark-blue};
+  --elements-color: #{$dark-blue};
+  --input-color: #{$white};
+  --text-color: #{$white};
+}
+
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  font-family: $nunito-light;
+
+  header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+    background-color: var(--elements-color);
+    color: var(--text-color);
+    font-family: $nunito-extrabold;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+
+    button {
+      border: none;
+      background-color: transparent;
+      color: var(--text-color);
+      font-family: inherit;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
