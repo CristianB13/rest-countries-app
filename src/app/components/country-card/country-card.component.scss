@@ -1,0 +1,38 @@
+@import "../../../styles/fonts";
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--elements-color);
+  border-radius: 5px;
+  border: none;
+  overflow: hidden;
+  text-align: left;
+
+  &:hover {
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 1.5rem 3rem;
+    gap: 1rem;
+    color: var(--text-color);
+    
+    .title {
+      font-family: $nunito-extrabold;
+    }
+
+    .details {
+      span.title {
+        font-family: $nunito-semibold;
+      }
+    }
+  }
+}
