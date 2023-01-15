@@ -1,13 +1,13 @@
 <button class="card">
-  <img src="https://flagcdn.com/de.svg" alt="">
+  <img [src]="country.flags.png" alt="">
   <div class="info">
     <div class="title">
-      Germany
+      {{country.name.common}}
     </div>
     <div class="details">
-      <div><span class="title">Population: </span>something</div>
-      <div><span class="title">Region: </span>something</div>
-      <div><span class="title">Capital: </span>something</div>
+      <div><span class="title">Population: </span>{{country.population}}</div>
+      <div><span class="title">Region: </span>{{country.region}}</div>
+      <div><span class="title">Capital: </span>{{country.capital}}</div>
     </div>
   </div>
 </button>
