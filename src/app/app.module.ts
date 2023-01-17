@@ -6,17 +6,26 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CountriesComponent } from './components/countries/countries.component';
 import { CountryCardComponent } from './components/country-card/country-card.component';
+import { CountryComponent } from './components/country/country.component';
+import { RouterModule, Routes } from '@angular/router';
+
+const appRoutes: Routes = [
+  {path: ':code', component: CountryComponent},
+  {path: '', component: CountriesComponent}
+]
 
 @NgModule({
   declarations: [
     AppComponent,
     CountriesComponent,
-    CountryCardComponent
+    CountryCardComponent,
+    CountryComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

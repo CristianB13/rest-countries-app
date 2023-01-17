@@ -1,0 +1,13 @@
+<ng-container *ngIf="country$ | async as country">
+  <nav>
+    <button (click)="back()">Back</button>
+  </nav>
+  <div class="content">
+    <div class="flag">
+      <img [src]="country[0].flags.svg" alt="">
+    </div>
+    <div class="info">
+      
+    </div>
+  </div>
+</ng-container>

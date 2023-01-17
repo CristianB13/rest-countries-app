@@ -15,6 +15,10 @@ export class CountryService {
   }
 
   getByName(name: string): Observable<unknown[]> {
-    return this.http.get<unknown[]>(`${this.apiUrl}/name/${name}`)
+    return this.http.get<unknown[]>(`${this.apiUrl}/name/${name}`);
+  }
+
+  getByCode(code: string): Observable<unknown[]> {
+    return this.http.get<unknown[]>(`${this.apiUrl}/alpha/${code}`);
   }
 }
