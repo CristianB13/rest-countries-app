@@ -25,6 +25,8 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Here](https://github.com/CristianB13/rest-countries-app)
+- Live Site URL: [Here](https://rest-countries-app-13.netlify.app/)
+
 
 ### Built with
 
@@ -33,6 +35,7 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - [Angular](https://angular.io/) - Web framework
+- [Rest Countries Api](https://restcountries.com/)
 
 ### Useful resources
 - [Angular Http Client](https://angular.io/guide/http)
