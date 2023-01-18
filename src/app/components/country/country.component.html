@@ -4,10 +4,74 @@
   </nav>
   <div class="content">
     <div class="flag">
-      <img [src]="country[0].flags.svg" alt="">
+      <img [src]="country[0].flags['svg']" alt="" />
     </div>
     <div class="info">
-      
+      <h1>{{ country[0].name.common }}</h1>
+      <div class="grid-2">
+        <div>
+          <p class="item">
+            <span class="title">Native Name: </span>
+            <span
+              *ngFor="
+                let name of country[0].name.nativeName | keyvalue;
+                let last = last
+              "
+            >
+              {{ name.value.common }}{{ last ? "" : ", " }}
+            </span>
+          </p>
+          <p class="item">
+            <span class="title">Population: </span>{{ country[0].population }}
+          </p>
+          <p class="item">
+            <span class="title">Region: </span>{{ country[0].region }}
+          </p>
+          <p class="item">
+            <span class="title">Sub Region: </span>{{ country[0].subregion }}
+          </p>
+          <p class="item">
+            <span class="title">Capital: </span>{{ country[0].capital }}
+          </p>
+        </div>
+        <div>
+          <p class="item">
+            <span class="title">Top Level Domain: </span>{{ country[0].tld[0] }}
+          </p>
+          <p class="item">
+            <span class="title">Currencies: </span>
+            <span
+              *ngFor="
+                let currency of country[0].currencies | keyvalue;
+                let last = last
+              "
+            >
+              {{ currency.value.name }}{{ last ? "" : ", " }}
+            </span>
+          </p>
+          <p class="item">
+            <span class="title">Languages: </span>
+            <span
+              *ngFor="
+                let language of country[0].languages | keyvalue;
+                let last = last
+              "
+            >
+              {{ language.value }}{{ last ? "" : ", " }}
+            </span>
+          </p>
+        </div>
+      </div>
+      <div class="flex-row" *ngIf="country[0].borders">
+        <span class="title">Border Countries: </span>
+        <button
+          [routerLink]="['../', code]"
+          class="item"
+          *ngFor="let code of country[0].borders"
+        >
+          {{ code }}
+        </button>
+      </div>
     </div>
   </div>
 </ng-container>

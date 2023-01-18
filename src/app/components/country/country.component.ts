@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
-import { CountryService } from 'src/app/services/country.service';
+import { Country, CountryService } from 'src/app/services/country.service';
 import { Location } from '@angular/common';
 import { Title } from '@angular/platform-browser';
 
@@ -11,7 +11,7 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./country.component.scss']
 })
 export class CountryComponent implements OnInit {
-  country$!: Observable<any[]>;
+  country$!: Observable<Country[]>;
 
   constructor(private countryService: CountryService,
     private route: ActivatedRoute,
