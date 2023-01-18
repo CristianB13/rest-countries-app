@@ -1,7 +1,100 @@
+@import "../../../styles/fonts";
+
 :host {
+  padding: 4rem;
+  overflow-y: auto;
+
+  @media screen and (max-width: 60rem) {
+    padding: 2rem;
+  }
+}
+
+.cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
   gap: 4rem;
-  padding: 4rem;
-  overflow-y: auto;
+}
+
+.options {
+  display: flex;
+  padding-bottom: 4rem;
+  align-items: center;
+  justify-content: space-between;
+
+  @media screen and (max-width: 60rem) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .search {
+    display: flex;
+    position: relative;
+    width: 25rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+    @media screen and (max-width: 40rem) {
+      width: 100%;
+    }
+
+    .icon {
+      position: absolute;
+      top: 50%;
+      left: 0.5rem;
+      width: 1rem;
+      transform: translate(0, -50%);
+      fill: var(--input-color)
+    }
+
+    input {
+      width: 100%;
+      background-color: var(--elements-color);
+      border: none;
+      padding: 1rem 0 1rem 2rem;
+      border-radius: 5px;
+      color: var(--text-color);
+      font-family: $nunito-semibold;
+
+      &::placeholder {
+        color: var(--input-color);
+      }
+    }
+  }
+
+  .filters {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 60rem) {
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+    }
+
+    .filter {
+      background-color: var(--elements-color);
+      color: var(--text-color);
+      padding: 0.25rem;
+      border-radius: 5px;
+      display: flex;
+      gap: 0.25rem;
+      align-items: center;
+
+      .delete {
+        display: flex;
+        fill: var(--text-color);
+        background-color: transparent;
+        border: none;
+
+        &:hover {
+          cursor: pointer;
+        }
+        
+        svg {
+          width: 10px;
+        }
+      }
+    }
+  }
 }
