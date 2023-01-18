@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, HostBinding, Input } from '@angular/core';
+import { Country } from 'src/app/services/country.service';
 
 @Component({
   selector: 'app-country-card',
@@ -6,5 +7,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./country-card.component.scss']
 })
 export class CountryCardComponent {
-  @Input() country: any;
+  @Input() country!: Country;
 }

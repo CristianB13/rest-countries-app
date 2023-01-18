@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { CountryService } from 'src/app/services/country.service';
+import { CountryService, Country } from 'src/app/services/country.service';
 
 @Component({
   selector: 'app-countries',
@@ -8,7 +8,7 @@ import { CountryService } from 'src/app/services/country.service';
   styleUrls: ['./countries.component.scss']
 })
 export class CountriesComponent implements OnInit {
-  countries$!: Observable<unknown[]>;
+  countries$!: Observable<Country[]>;
   constructor(private countryService: CountryService) { }
 
   ngOnInit(): void {
