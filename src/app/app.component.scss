@@ -44,5 +44,16 @@
         cursor: pointer;
       }
     }
+
+    .switch{
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      svg {
+        width: 15px;
+        fill: var(--text-color)
+      }
+    }
   }
 }

@@ -12,8 +12,9 @@ import { DropdownComponent } from './components/dropdown/dropdown.component';
 import { FilterPipe } from './pipes/filter.pipe';
 
 const appRoutes: Routes = [
-  {path: ':code', component: CountryComponent},
-  {path: '', component: CountriesComponent}
+  { path: ':code', component: CountryComponent },
+  { path: '', component: CountriesComponent },
+  { path: '**', redirectTo: ''}
 ]
 
 @NgModule({
