@@ -8,6 +8,8 @@ import { CountriesComponent } from './components/countries/countries.component';
 import { CountryCardComponent } from './components/country-card/country-card.component';
 import { CountryComponent } from './components/country/country.component';
 import { RouterModule, Routes } from '@angular/router';
+import { DropdownComponent } from './components/dropdown/dropdown.component';
+import { FilterPipe } from './pipes/filter.pipe';
 
 const appRoutes: Routes = [
   {path: ':code', component: CountryComponent},
@@ -19,7 +21,9 @@ const appRoutes: Routes = [
     AppComponent,
     CountriesComponent,
     CountryCardComponent,
-    CountryComponent
+    CountryComponent,
+    DropdownComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

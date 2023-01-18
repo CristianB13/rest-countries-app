@@ -1,0 +1,6 @@
+{{text}}
+<div *ngIf="open" class="options">
+  <div class="option" *ngFor="let option of options" (click)="onClick(option)">
+    {{option}}
+  </div>
+</div>
